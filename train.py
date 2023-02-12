@@ -52,7 +52,10 @@ placeholders = {
     'lape_idx': [tf.placeholder(tf.int32, shape=(None, 10)) for _ in range(num_blocks)], #for laplace term
     'pool_idx': [tf.placeholder(tf.int32, shape=(None, 2)) for _ in range(num_blocks-1)] #for unpooling
 }
+
+print 'Model about to load'
 model = GCN(placeholders, logging=True)
+print 'Model loaded'
 
 # Load data, initialize session
 data = DataFetcher(FLAGS.data_list)
@@ -65,12 +68,15 @@ sess = tf.Session(config=config)
 sess.run(tf.global_variables_initializer())
 #model.load(sess)
 
+print 'Session Loaded'
+
 # Train graph model
 train_loss = open('record_train_loss.txt', 'a')
 train_loss.write('Start training, lr =  %f\n'%(FLAGS.learning_rate))
 pkl = pickle.load(open('Data/ellipsoid/info_ellipsoid.dat', 'rb'))
 feed_dict = construct_feed_dict(pkl, placeholders)
 
+print 'Training starting'
 train_number = data.number
 for epoch in range(FLAGS.epochs):
 	all_loss = np.zeros(train_number,dtype='float32') 
