@@ -1,0 +1,5 @@
+Data/ShapeNetP2M/02828884/1dd7409c95d59d0da192483aa282f8e5/rendering/00.dat
+Data/ShapeNetP2M/02828884/1dd7409c95d59d0da192483aa282f8e5/rendering/01.dat
+Data/ShapeNetP2M/02828884/1dd7409c95d59d0da192483aa282f8e5/rendering/02.dat
+Data/ShapeNetP2M/02828884/1dd7409c95d59d0da192483aa282f8e5/rendering/03.dat
+Data/ShapeNetP2M/02828884/1dd7409c95d59d0da192483aa282f8e5/rendering/04.dat
